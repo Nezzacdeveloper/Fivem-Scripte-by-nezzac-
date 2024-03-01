@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Medium.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Industry';
+    font-weight: 300;
+}
+
+/* DEFAULT */
+
+.info-not {
+    width: fit-content !important;
+}
+
+.info-not .content {
+    padding: 16px 0px 16px 0px;
+}
+
+.blue-info {
+    border-radius: 3px;
+    background-color: #000202;
+    border-left: 10px solid #1C53F4;
+    margin-bottom: 20px;
+}
+
+.info-not .info-icon, .info-not .text {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* CUSTOM COLORS */
+
+/* BLUE */
+
+.blue-info .info-icon {
+    color: #1C53F4;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.blue-info .text {
+    color: white;
+    font-weight: 300;
+    margin-right: 35px;
+}
+
+.blue-info .text span {
+    font-weight: bold;
+}
+
+/* ORANGE */
+
+.orange-info {
+    border-radius: 5px;
+    background-color: #0e1527;
+    border-left: 10px solid #E5386D;
+}
+
+.orange-info .info-icon {
+    color: #E5386D;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.orange-info .text {
+    color: white;
+    font-weight: 300;
+    margin-right: 35px;
+}
+
+.orange-info .text span {
+    font-weight: bold;
+    border: 2px solid #E5386D;
+    border-radius: 5px;
+    padding: 9px 14px;
+    margin: 0px 5px 0px 5px;
+}
+
+/* GREEN */
+
+.green-info {
+    border-radius: 5px;
+    background-color: #0e1527;
+    padding-bottom: 10px;
+}
+
+.green-info .info-icon {
+    color: #37B158;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.green-info .text {
+    color: white;
+    font-weight: bold;
+    margin-right: 35px;
+    font-size: 20px;
+    padding-right: 40px;
+}
+
+.green-info::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+	height: 10px;
+    background-color: #9BD2A9;
+    z-index: 1;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.progress-bar {
+  content: '';
+  position: absolute;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  background-color: #37B158;
+  z-index: 2;
+  border-radius: 0px 5px 5px 5px;
+}
+
+/* SERVER NOTIFICATION */
+
+
+#info-big {
+    width: fit-content !important;
+    margin: 0 auto;
+    position: relative;
+    top: 25px;
+}
+
+#info-big .info-icon, #info-big .text {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.server-info {
+    border-radius: 25px;
+    background-image: url(../img/bg.png);
+    background-size: cover;
+}
+
+.server-info .info-icon {
+    padding: 27px 40px;
+}
+
+.server-info .info-icon img {
+    height: 106.22px;
+    width: auto;
+}
+
+.server-info .text {
+    padding: 0px 250px 0px 0px;
+    max-width: 400px;
+}
+
+.server-info {
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.server-info .headline {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.server-info {
+    color: white;
+}
+
+
+/* POSITIONS */
+
+.right {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+.left {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+
+.center-bottom {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+}
+
+#tickFrame, #progressFrame, #info-big, .blue-info {
+  display: none;
+}
+
+
+.text {
+  max-width: 20vw;
+  min-width: 20vw;
+  line-height: 24px;
+}
+
+.obicno {
+  font-weight: normal !important;
+}
+
+
+.color-0{color: #006DE6;}
+.color-1{color: #ff4444;}
+.color-2{color: #99cc00;}
+.color-3{color: #ffbb33;}
+.color-4{color: #0099cc;}
+.color-5{color: #33b5e5;}
+.color-6{color: #aa66cc;}
+.color-8{color: #cc0000;}
+.color-9{color: #cc0068;}
+
+.gameColor-w{color: #ffffff;}
+.gameColor-r{color: #ff4444;}
+.gameColor-g{color: #99cc00;}
+.gameColor-y{color: #ffbb33;}
+.gameColor-b{color: #33b5e5;}
+.gameColor-o{color: #FF8C00;}
+
+
+.notifBox {
+  bottom: 2.5vh;
+  right: 1.5vw;
+  position: fixed;
+}
+
+.notifBox:first-child {
+  margin-top: -5px;
+}
+
+.divider {
+  width: 99%;
+    margin: 0 auto;
+    text-align: center;
+    height: 1px;
+    background-color: rgba(255,255,255,0.4);
+    margin: 5px 0px;
+}
+
+.tweet {
+  margin-top: 10px;
+  background-color: rgba(29, 161, 242, 0.6);
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+    margin-left: auto;
+}
+
+.advert {
+  margin-top: 10px;
+  background-color: rgba(234, 238, 33, 0.72);
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.tweetImage {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.tweetContent {
+    padding: 8px 20px;
+}
+
+.tweetPostImage {
+    background-image: url(https://cdn.discordapp.com/attachments/867695703547183114/880115944112934922/unknown.png);
+    width: 60px;
+    height: 50px;
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.tweetUsername {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tweetMessage {
+    max-width: 20vw;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+
+
+/* NOVO */
+
+.twitter, .add-not {
+    width: 25vw;
+    margin: 10px 0px;
+}
+
+.twitter .top-label {
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+}
+.top-label .logo {
+    display: flex;
+    align-items: center;
+}
+.top-label .logo img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.top-label .logo p {
+    font-size: 12px;
+    color: #595959;
+}
+
+.top-label .user-name {
+    font-weight: bold;
+    font-size: 12px;
+    color: #595959;
+    margin-left: auto;
+}
+
+.not-content {
+    display: flex;
+    padding: 12px 16px;
+}
+
+.twitter .not-content {
+    background-color: rgba(22, 31, 44, 0.7);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.not-content .image-content {
+    padding-left: 10px;
+}
+
+.not-content .text-content p {
+    font-size: 12px;
+    color: white;
+    line-height: 18px;
+    text-overflow: ellipsis; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: calc(25vw - 82px);
+    white-space: nowrap;
+}
+
+.not-content .image-content {
+    display: flex;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.not-content .image-content img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.not-content .text-content .press-for-more {
+    color: #969292;
+    font-size: 10px;
+}
+
+.add-not  {
+    min-width: 20vw;
+}
+
+.add-not .not-content {
+    background-color: rgba(69, 72, 42, 0.7);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.add-not .top-label {
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.add-not .logo p {
+    font-size: 12px;
+    color: #E8E5E5;
+}
+
+.add-not .user-name {
+    font-weight: bold;
+    font-size: 12px;
+    color: #E8E5E5;
+    margin-left: auto;
+}
+
+.noimg .not-content .text-content p, .noimg .not-content .text-content p {
+    width: calc(25vw - 32px);
+}
+
+
+
+@media only screen and (max-width: 1400px) {
+    .twitter, .add-not {
+        width: 30vw;
+    }
+    
+    .noimg .not-content .text-content p, .noimg .not-content .text-content p {
+    width: calc(30vw - 32px);
+    }
+    
+    .not-content .text-content p {
+    width: calc(30vw - 82px);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .twitter, .add-not {
+        width: 35vw;
+    }
+    
+    .noimg .not-content .text-content p, .noimg .not-content .text-content p {
+    width: calc(35vw - 32px);
+    }
+    
+    .not-content .text-content p {
+    width: calc(35vw - 82px);
+    }
+}

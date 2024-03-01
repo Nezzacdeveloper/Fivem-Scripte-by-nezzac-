@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+*{
+	/*text-shadow: 0px 0px 10px black;*/
+	filter: drop-shadow(0px 0px 3px #00000020);
+}
+
+
+body{
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+
+	display: flex;
+	flex-wrap: wrap;
+	font-family: 'Kanit', sans-serif;
+}
+p,h1,h2,h3,h4,h5{
+	margin: 0;
+	font-weight: normal;
+}
+
+.box{
+	width: 50vw;
+	height: 50vh;
+}
+.box.brzina{
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+.box .brzinomjer{
+	margin: 5vh 3vw;
+}
+.box .brzinomjer .top{
+	display: flex;
+	align-items: center;
+}
+.box .brzinomjer h1{
+	color: white;
+	margin-top: -20px;
+	font-size: 50px;
+	text-align: center;
+	min-width: 63px;
+}
+.box .brzinomjer span{
+	font-size: 15px;
+	margin-left: 30px;
+	color: white;
+}
+.box .brzinomjer .gorivo{
+	width: 3px;
+  	height: 45px;
+  	background: #5353531e;
+  	margin-left: 5px;
+  	margin-right: 5px;
+  	display: flex;
+  	align-items: flex-end;
+}
+.box .brzinomjer .gorivo .gorivo_bar{
+	height: 70%;
+	width: 3px;
+	background: #3171e7b7;
+}
+.box .brzinomjer .info{
+	height: 45px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.box .brzinomjer .info .brzine p{
+	color: white;
+	font-size: 22px;
+	margin-top: -7px;
+	margin-bottom: -10px;
+}
+.box .brzinomjer .info .benzin i{
+	font-size: 17px;
+	color: white;
+}
+.box .brzinomjer .info .benzin svg{
+	width: 17px;
+}
+.box .brzinomjer .info .benzin{
+	display: flex;
+	align-items: center;
+}
+.box .brzinomjer .info .benzin span{
+	margin: 0;
+	padding-left: 5px;
+	font-size: 10px;
+}
+.box .brzinomjer .bottom{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 110px;
+	height: 20px;
+	margin-top: -10px;
+}
+.box .brzinomjer .bottom svg{
+	width: 13px;
+	fill: #ffffff80;
+}
+.broj p{
+	color: white;
+	width: 100%;
+	text-align: center;
+	font-size: 10px;
+	margin-bottom: 5px;
+}
+.blinker{
+	animation: zmigavac 1s infinite;
+}
+@keyframes zmigavac {
+	0% {fill: orange}
+	49% {fill: orange}
+	50% {fill: #ffffff80;}
+}
+
+.mapa {
+  position: absolute;
+  width: 12.5vw;
+  height: 12.1vw;
+  border-radius: 50%;
+  bottom: 5.2%;
+  left: 1.4%;
+  box-shadow: 0px 0px 0px 2px #ce1010;
+
+  display: none;
+}

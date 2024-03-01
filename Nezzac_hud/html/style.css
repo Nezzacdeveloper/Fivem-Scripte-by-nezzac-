@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+body { margin: 0; padding: 0; overflow: hidden; box-sizing: border-box; font-family: 'Poppins', cursive; font-weight: 100;user-select: none;}  
+
+
+.safe_job {
+    stroke-dasharray: 0.544;
+    stroke-dashoffset: 0.544;
+}
+
+.air{
+    stroke-dasharray: 258.544;
+    stroke-dashoffset: 258.544;
+    z-index: 10;
+}
+
+.hp{
+    stroke-dasharray: 258.544;
+    stroke-dashoffset: 258.544;
+}
+
+.arm{
+    stroke-dasharray: 259.558;
+    stroke-dashoffset: 259.558;
+}
+
+.voda{
+    stroke-dasharray: 259.56;
+    stroke-dashoffset: 259.56;
+}
+
+.hrana{
+    stroke-dasharray: 260.576;
+    stroke-dashoffset: 260.576;
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+
+.notif-holder{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 200px;
+}
+.notifikacija{
+    display: flex;
+    position: relative;
+    background-color: #0E1527;
+    border: solid 2px #28489e;
+    background-color: #0E1527;
+    color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+    right: -1500px;
+}
+.ikonica-notif{
+    line-height: 4rem;
+    padding: 0 2.5rem 0 1rem;
+    font-size: 1.5rem;
+    color: var(--color);
+}
+.tekst-notif{
+    line-height: 1rem;
+    padding: 1rem 1rem 1rem 0;
+    font-size: 0.9rem;
+    align-self: center;
+    vertical-align: middle;
+    justify-items: center;
+    display: flex;
+    max-width: 400px;
+    min-width: 200px;
+}
+.loading{
+    position: absolute;
+    background-color: #0E1527;
+    bottom: 0.5rem;
+    height: 2px;
+    width: 90%;
+    margin-left:5% ;
+}
+.loading-inner{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    left: 0;
+}
+.divider{
+    position: absolute;
+    top: 1rem;
+    left: 3.5rem;
+    width: 1px;
+    background-color: #0E1527;
+    margin-right: 1rem;
+    bottom: 1rem;
+}
+.notifikacija::after{
+    height: 4rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    content: '';
+    position: absolute;
+    background-color: var(--color);
+    right: -1px;
+    bottom: -1px;
+    z-index: -1;
+    filter: drop-shadow(1px 1px 1px var(--color));
+}
+.announce{
+    position: absolute;
+    width: 35vw;
+    min-height: 7vh;
+    margin: 2vh auto 0 auto;
+    display: flex;
+    background-color: #0E1527;
+    border-radius: 0.5rem;
+    top: -1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(1px 1px 3px black);
+    overflow: hidden;
+}
+.announce-loading{
+    position: absolute;
+    background-color: #3463a848;
+    bottom: 0.5rem;
+    height: 2px;
+    width: 90%;
+    margin-left:5% ;
+}
+.announce-loading-inner{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: #1b578f;
+    left: 0;
+}
+.logo{
+    height: 90%;
+    width: 20%;
+}
+.logo svg{
+    margin: 0 2%;
+}
+.logo-drugi{
+    position: absolute;
+    top: -30px;
+    right: 0px;
+    rotate:30deg;
+    fill: none;
+    height: 200%;
+    z-index: -5;
+    opacity: 0.5;
+}
+.announce-sadrzaj{
+    width: 78%;
+    text-align: center;
+    color: white;
+    height: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 3%;
+    padding: 0 1% 0 0;
+}
+.sender{
+    padding: 2%;
+    font-weight: bolder;
+    height: 30%;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.8vh;
+}
+.tekst-announce{
+    font-weight: bold;
+    font-size: 2.5vh;
+    height: 70%;
+}
+.job-holder{
+       display: none;
+       position: absolute;
+       top:20px;
+       right: 0;
+       font-weight: 600;
+       width: fit-content;
+       letter-spacing: 1px;
+       padding: 5px 10px;
+       background-color: #0E1527;
+       color: white;
+       overflow: hidden;
+}
+.ammo{
+    display: none;
+    position: absolute;
+    bottom: 13px;
+    right: 0;
+    font-weight: 600;
+   /*width: 3.5vw;*/
+    min-width: 3.5vw;
+    padding: 5px 10px;
+    padding-right: 5px;
+    padding-left: 20px;
+    background-color: #0c2d74;
+    color: white;
+    text-align: left;
+}
+.ammo svg{
+    transform: translateY(30%);
+    fill: white;
+    float: right
+}
+.ammo span{
+    float: right;
+    margin-right: 7px
+}
+.tick-notif {
+    width: 20vw;
+    height: 3vh;
+    max-height: 3vh;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #0E1527;
+    position: absolute;
+    margin-top: -6vh;
+    color:  white;
+    animation: pulseKoFol 2s linear infinite;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    top: 8vh;
+    left: 10px;
+    border-radius: 5px;
+}
+
+@keyframes pulseKoFol {
+  0%   {transform: scale(1.0)}
+  25%  {transform: scale(1.04)}
+  50%  {transform: scale(1.03)}
+  100% {transform: scale(1.01)}
+}
+.downleft{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.hud3{
+    position: absolute;
+    width: 20vw;
+    height: 16.2vh;
+    margin-bottom: 5px;
+    scale: 0.9;
+    
+    bottom: 0;
+    left: 0;
+}
+
+.ghost-hud3{
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    
+}
+
+.glavni-hud3{
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+}
+
+.hud3ikonica{
+    color: white;
+    height: 100px;
+    width: 100px;
+    rotate: 90deg;
+    display: block;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-content: center;
+}
+
+.hud3ikonica i{
+    width: 100px;
+    align-self: center;
+    font-size: 25px;
+    
+}
+
+.voice{
+    stroke-dasharray: 258.544;
+    stroke-dashoffset: 258.544;
+}
+.speedo {
+    position: absolute;
+    bottom: 30px;
+    right: 80px;
+    scale: 0.75;
+    display: none;
+}
+
+.brzino{
+    stroke-dasharray: 358.726;
+    stroke-dashoffset: 358.726;
+    z-index: 998;
+    transition: all 0ms;
+}
+.brzinomer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    filter: drop-shadow(2px 2px 5px #00000096);
+}
+.brzinomerghost{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 995;
+}
+.speed-digit{
+    font-family: 'Share Tech Mono', monospace;
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    font-size: 70px;
+    color: white;
+}
+.st0{
+    z-index: 997;
+}
+.carhp {
+    stroke-dasharray: 120.863;
+    stroke-dashoffset: 120.863;
+}
+.carfuel {
+    stroke-dasharray: 120.871;
+    stroke-dashoffset: 120.871;
+}
+.carnitro {
+    stroke-dasharray: 105.53;
+    stroke-dashoffset: 105.53; 
+}
+.pumpa{
+    position: absolute;
+    color: white;
+    right: 190px;
+    bottom: 120px;
+    font-size: 25px;
+}
+.wrench{
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    right: 115px;
+    bottom: 200px;
+    font-size: 25px;
+}
